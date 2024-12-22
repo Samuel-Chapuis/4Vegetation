@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"categorie": "misc",
+	"pattern": [
+		"LLL",
+		"LPL",
+		"LLL"
+	],
+	"key": {
+		"L":{
+			"item": "minecraft:lily_pad"
+		},
+		"P": {
+			"item": "minecraft:peony"
+		}
+	},
+	"result": {
+		"item": "forvegetation:biglilypad"
+	}
+}

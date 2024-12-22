@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"categorie": "misc",
+	"pattern": [
+		"GG ",
+		"GG ",
+		"   "
+	],
+	"key": {
+		"G":{
+			"item": "minecraft:grass"
+		}
+	},
+	"result": {
+		"item": "forvegetation:junglegrass"
+	}
+}

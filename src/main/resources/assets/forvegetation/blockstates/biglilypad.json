@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "forvegetation:block/biglilypad" },
+    "facing=east": { "model": "forvegetation:block/biglilypad", "y": 90 },
+    "facing=south": { "model": "forvegetation:block/biglilypad", "y": 180 },
+    "facing=west": { "model": "forvegetation:block/biglilypad", "y": 270 }
+  }
+}

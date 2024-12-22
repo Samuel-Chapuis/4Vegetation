@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"category": "misc",
+	"ingredients": [
+		{
+			"item": "forvegetation:junglegrass"
+		}
+	],
+	"result": {
+		"item": "forvegetation:junglegrasslight",
+		"count": 2
+	}
+}
