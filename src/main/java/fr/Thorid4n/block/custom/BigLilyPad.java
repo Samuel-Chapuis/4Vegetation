@@ -4,34 +4,32 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
-import net.minecraft.world.level.material.FluidState;
-import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class BigLilyPad extends BushBlock {
-
+public class BigLilyPad extends Block {
+    public static final VoxelShape SHAPE = Block.box(0, 0, 0, 16, 16, 16);
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
-    private static final VoxelShape LILYPAD_SHAPE = Block.box(0, 0, 0, 16, 0.5, 16);
+
+
     public BigLilyPad(Properties properties) {
         super(properties
-                .instabreak()   // Optional, lilypads typically break instantly
-        );
+                .strength(1.0f)
+                .noOcclusion()
+                .noCollission()
+                .isRedstoneConductor((a, b, c) -> false)
+                .isSuffocating((a, b, c) -> false));
         this.registerDefaultState(this.defaultBlockState().setValue(FACING, Direction.NORTH));
     }
 
     @Override
-    protected boolean mayPlaceOn(BlockState pState, BlockGetter pLevel, BlockPos pPos) {
-        FluidState fluidstate = pLevel.getFluidState(pPos);
-        FluidState fluidstate1 = pLevel.getFluidState(pPos.above());
-        return (fluidstate.getType() == Fluids.WATER || pState.getBlock() instanceof IceBlock) && fluidstate1.getType() == Fluids.EMPTY;
+    public RenderShape getRenderShape(BlockState state) {
+        return RenderShape.MODEL;
     }
 
     @Override
@@ -45,13 +43,7 @@ public class BigLilyPad extends BushBlock {
     }
 
     @Override
-    public RenderShape getRenderShape(BlockState state) {
-        return RenderShape.MODEL;
-    }
-
-    @Override
-    public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        // For a bigger lilypad, you can return a shape that’s wider/taller.
-        return LILYPAD_SHAPE;
+    public VoxelShape getShape(BlockState state, BlockGetter plevel, BlockPos pos, CollisionContext context) {
+        return SHAPE;
     }
 }
