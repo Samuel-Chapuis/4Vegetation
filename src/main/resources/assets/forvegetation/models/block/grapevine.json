@@ -4,7 +4,7 @@
 	"textures": {
 		"0": "forvegetation:block/oaktexture",
 		"1": "forvegetation:block/grapevinetexture",
-		"particle": "oak"
+		"particle": "forvegetation:block/grapevinetexture"
 	},
 	"elements": [
 		{

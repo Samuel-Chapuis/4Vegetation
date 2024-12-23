@@ -23,6 +23,7 @@ public class Junglegrasslight extends Block {
         super(properties
                 .strength(1.0f)
                 .noOcclusion()
+                .instabreak()
                 .noCollission()
                 .isRedstoneConductor((a, b, c) -> false)
                 .isSuffocating((a, b, c) -> false));

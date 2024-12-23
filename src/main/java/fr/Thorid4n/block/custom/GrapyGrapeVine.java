@@ -23,6 +23,7 @@ public class GrapyGrapeVine extends Block {
         super(properties
                 .strength(1.0f)
                 .noOcclusion()
+                .instabreak()
                 .isRedstoneConductor((a, b, c) -> false)
                 .isSuffocating((a, b, c) -> false));
         this.registerDefaultState(this.defaultBlockState().setValue(FACING, Direction.NORTH));
