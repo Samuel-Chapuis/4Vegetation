@@ -21,6 +21,8 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModBlocks.JUNGLE_GRASS.get());
                         pOutput.accept(ModBlocks.BIG_LILY_PAD.get());
                         pOutput.accept(ModBlocks.JUNGLE_GRASS_LIGHT.get());
+                        pOutput.accept(ModBlocks.GRAPE_VINE.get());
+                        pOutput.accept(ModBlocks.GRAPY_GRAPE_VINE.get());
 
                     })
                     .build());

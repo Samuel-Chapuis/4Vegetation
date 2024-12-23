@@ -1,9 +1,7 @@
 package fr.Thorid4n.block;
 
 import fr.Thorid4n.ForVegetation;
-import fr.Thorid4n.block.custom.BigLilyPad;
-import fr.Thorid4n.block.custom.JungleGrass;
-import fr.Thorid4n.block.custom.Junglegrasslight;
+import fr.Thorid4n.block.custom.*;
 import fr.Thorid4n.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -28,6 +26,12 @@ public class ModBlocks {
 
 	public static final RegistryObject<Block> JUNGLE_GRASS_LIGHT = registerBlock("junglegrasslight",
 			() -> new Junglegrasslight(BlockBehaviour.Properties.copy(Blocks.GRASS)));
+
+	public static final RegistryObject<Block> GRAPE_VINE = registerBlock("grapevine",
+			() -> new GrapeVine(BlockBehaviour.Properties.copy(Blocks.SPRUCE_SIGN)));
+
+	public static final RegistryObject<Block> GRAPY_GRAPE_VINE = registerBlock("grapygrapevine",
+			() -> new GrapyGrapeVine(BlockBehaviour.Properties.copy(Blocks.SPRUCE_SIGN)));
 
 	public static final RegistryObject<Block> BIG_LILY_PAD = registerBlock("biglilypad",
 			() -> new BigLilyPad(BlockBehaviour.Properties.copy(Blocks.LILY_PAD)));

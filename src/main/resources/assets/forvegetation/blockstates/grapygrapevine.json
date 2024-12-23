@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "forvegetation:block/grapygrapevine" },
+    "facing=east":  { "model": "forvegetation:block/grapygrapevine", "y": 90 },
+    "facing=south": { "model": "forvegetation:block/grapygrapevine", "y": 180 },
+    "facing=west":  { "model": "forvegetation:block/grapygrapevine", "y": 270 }
+  }
+}

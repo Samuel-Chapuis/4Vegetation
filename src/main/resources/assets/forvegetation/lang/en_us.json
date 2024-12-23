@@ -2,11 +2,13 @@
 	"item.forvegetation.junglegrass": "Jungle Grass",
 	"item.forvegetation.junglegrasslight": "Jungle Grass Light",
 	"item.forvegetation.biglilypad": "Big Lily Pad",
+	"item.forvegetation.grapevine": "Grapevine",
 
 
 	"block.forvegetation.junglegrass": "Jungle Grass",
 	"block.forvegetation.junglegrasslight": "Jungle Grass Light",
 	"block.forvegetation.biglilypad": "Big Lily Pad",
+	"block.forvegetation.grapevine": "Grapevine",
 
 	"creativetab.forvegetation": "For Vegetation"
 }
