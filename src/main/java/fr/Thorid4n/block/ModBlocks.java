@@ -7,6 +7,7 @@ import fr.Thorid4n.block.custom.Junglegrasslight;
 import fr.Thorid4n.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.PlaceOnWaterBlockItem;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -29,12 +30,9 @@ public class ModBlocks {
 			() -> new Junglegrasslight(BlockBehaviour.Properties.copy(Blocks.GRASS)));
 
 	public static final RegistryObject<Block> BIG_LILY_PAD = registerBlock("biglilypad",
-			() -> new BigLilyPad(BlockBehaviour.Properties
-					.copy(Blocks.LILY_PAD)    // or some minimal properties
-					.strength(0.0F)           // optional
-					.noCollission()
-			)
-	);
+			() -> new BigLilyPad(BlockBehaviour.Properties.copy(Blocks.LILY_PAD)));
+
+
 
 
 	private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
@@ -43,9 +41,13 @@ public class ModBlocks {
 		return toReturn;
 	}
 
-    private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
-        return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
-    }
+	private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
+		if (name.equals("biglilypad")) {
+			return ModItems.ITEMS.register(name,
+					() -> new PlaceOnWaterBlockItem(block.get(), new Item.Properties()));
+		}
+		return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+	}
 		
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

@@ -1,7 +1,12 @@
 {
 	"item.forvegetation.junglegrass": "Jungle Grass",
+	"item.forvegetation.junglegrasslight": "Jungle Grass Light",
+	"item.forvegetation.biglilypad": "Big Lily Pad",
+
 
 	"block.forvegetation.junglegrass": "Jungle Grass",
+	"block.forvegetation.junglegrasslight": "Jungle Grass Light",
+	"block.forvegetation.biglilypad": "Big Lily Pad",
 
 	"creativetab.forvegetation": "For Vegetation"
 }

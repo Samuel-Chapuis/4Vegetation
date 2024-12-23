@@ -22,7 +22,6 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModBlocks.BIG_LILY_PAD.get());
                         pOutput.accept(ModBlocks.JUNGLE_GRASS_LIGHT.get());
 
-
                     })
                     .build());
 
